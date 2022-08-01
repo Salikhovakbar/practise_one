@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <style>
+input{
+    background-color: aqua;
+    border: none;
+color: black;
+    cursor: pointer;
+}
+input:hover{
+    background-color: gray;
+}
+input:focus{
+    background-color: aquamarine;
+}
+.inside_about{
+    position: absolute;
+    top: 58px;
+    left: -40px;
+    display: none;
+    text-align: center;
+}
+.about:hover .inside_about{
+    display: block;
+}
+.inside_about >li{
+    padding: 20px 8px;
+    background-color: gold;
+ list-style: none;
+}
+.collection > li:hover{
+    background-color: chartreuse;
+}
+.inside_about > li:hover{
+background-color: greenyellow;
+}
+.inside_about > li:active{
+    box-shadow: 0px 0px 0px 2px black;
+}
+button{
+    padding: 9px 60px;
+    background-color: aqua;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 50px 200px ;
+    transition: 0.5s;
+    position: relative;
+}
+button:hover{
+    opacity: 0.6;
+    transition: 1s;
+}
+button:active{
+    background-color: gray;
+    box-shadow: 0px 0px 0px 3px black;
+}
+button:hover::before{
+    content: '';
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 14px solid black;
+position: absolute;
+top: 33px;
+left: 65px;
+}
+button:hover::after{
+    content: 'Hello';
+width: 50px;
+background-color: black;
+height: 20px;
+position: absolute;
+top: 47px;
+left: 47px;
+}
+    </style>
+</head>
+<body>
+    <ul class="collection">
+        <li class="back_end">
+            Home
+<ul class="inside">
+    <li>Cancel</li>
+    <li>Main page</li>
+    <li>back</li>
+
+</ul>
+        </li>
+        <li class="about">
+            about us
+        <ul class="inside_about">
+            <li>Phone Number</li>
+            <li>Echivments </li>
+            <li>Who are we?</li>
+
+        </ul>
+        </li>
+        <li>Help</li>
+
+
+    </ul>
+    <select name="" id="">
+    <option value="">uzbekistan</option>
+    <option value="" selected >Norway</option>
+    <option value="">Finland</option>
+    </select>
+    <input  list="character">
+    <datalist id="character">
+        <option value="Чебурашка"></option>
+        <option value="Крокодил Гена"></option>
+        <option value="Шапокляк"></option>
+    </datalist>
+    <input list="quest">
+    <datalist class="box" id="quest">
+        <option value="Norway"></option>
+        <option value="Finland"></option>
+        <option value="Russia"></option>
+
+    </datalist>
+    <br>
+<button>Next</button>
+</body>
+</html>
